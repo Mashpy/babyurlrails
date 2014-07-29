@@ -1,2 +1,9 @@
-<h1>Babyurls#new</h1>
-<p>Find me in app/views/babyurls/new.html.erb</p>
+<%= form_for :babyurl, url: babyurls_path do |f| %>
+
+<p>
+<%=f.label :url%> <br />
+<%=f.text_field :url%>
+</p>
+
+<p><%= f.submit %></p>
+<% end %>
