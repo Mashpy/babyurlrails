@@ -7,9 +7,14 @@ class BabyurlsController < ApplicationController
   end
 
   def show
-   @countview= Babyurl.find(params[:id]).count
-   @redirectpath = Babyurl.find(params[:id]).url
-    if @countview == '1'
+    @countview= Babyurl.find(params[:id]).count
+    @countloop = Babyurl.find(params[:id])
+    data = []
+    data << @countloop.update(
+      :count => @countview.to_i + 1.to_i
+       )
+    @redirectpath = Babyurl.find(params[:id]).url
+    if @countview.blank?
     else
       redirect_to @redirectpath
     end
@@ -26,7 +31,7 @@ end
 
   private
   def babyurl_params
-  params.require(:babyurl).permit(:url,:count)
+  params.require(:babyurl).permit(:url)
   end
   
 end

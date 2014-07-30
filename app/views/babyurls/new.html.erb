@@ -1,14 +1,7 @@
-<%= @abc %>
-
 <%= form_for :babyurl, url: babyurls_path do |f| %>
 <p>
 <%=f.label :url%> <br />
 <%=f.text_field :url%>
 </p>
-<p>
-<%=f.label :count%> <br />
-<%=f.text_field :count%>
-</p>
-
 <p><%= f.submit %></p>
 <% end %>
