@@ -1,3 +1,3 @@
 <h1>Babyurls#show</h1>
 <p>Find me in app/views/babyurls/show.html.erb</p>
-Shortlink url is => <a href="<%="http://#{request.host+request.fullpath}"%>"><%="http://#{request.host+request.fullpath}"%></a>
+Shortlink url is => <a href="<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}"%>"><%="#{request.protocol}#{request.host_with_port}#{request.fullpath}"%></a>
