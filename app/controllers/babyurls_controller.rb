@@ -1,6 +1,6 @@
 class BabyurlsController < ApplicationController
   def index
-
+    @babyurl = Babyurl.new
   end
 
   def new
@@ -8,6 +8,7 @@ class BabyurlsController < ApplicationController
   end
 
   def show
+    @babyurl = Babyurl.new
     @countview= Babyurl.find(params[:id]).count
     @countloop = Babyurl.find(params[:id])
     data = []

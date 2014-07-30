@@ -1,3 +1,4 @@
-<h1>Babyurls#show</h1>
-<p>Find me in app/views/babyurls/show.html.erb</p>
+<%= render 'babyurls/header' %>
 Shortlink url is => <a href="<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}"%>"><%="#{request.protocol}#{request.host_with_port}#{request.fullpath}"%></a>
+<%= render 'babyurls/new' %>
+<%= render 'babyurls/footer' %>
