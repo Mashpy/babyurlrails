@@ -1,4 +1,15 @@
 <%= form_for :babyurl, url: babyurls_path do |f| %>
+ <% if @babyurl.errors.any? %>
+  <div id="error_explanation">
+    <p><%= pluralize(@babyurl.errors.count, "error") %> prohibited
+      this post from being saved:</p>
+    <ul>
+    <% @babyurl.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
 <p>
 <%=f.label :url%> <br />
 <%=f.text_field :url%>

@@ -4,6 +4,7 @@ class BabyurlsController < ApplicationController
   end
 
   def new
+    @babyurl = Babyurl.new
   end
 
   def show
