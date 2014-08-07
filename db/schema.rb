@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140729184458) do
 
   create_table "babyurls", force: true do |t|
+    t.string   "ip"
     t.string   "url"
     t.string   "count"
     t.string   "tag"
