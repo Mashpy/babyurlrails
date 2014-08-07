@@ -1,18 +1,3 @@
 <%= render 'babyurls/header' %>
-<%= form_for :babyurl, url: babyurls_path do |f| %>
- <% if @babyurl.errors.any? %>
-  <div id="error_explanation">
-    <p><%= pluralize(@babyurl.errors.count, "error") %> prohibited
-      this post from being saved:</p>
-    <ul>
-    <% @babyurl.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
-<p>
- <p>Enter Long URL Here* <%=f.text_field :url, :value=>"http://" ,  :size=>50 %><br />
-<input class="btn btn-primary btn-success" type="submit" name="send" value="Make It Short!" class="submit" /></p>
-<% end %>
+<%= render 'babyurls/new' %>
 <%= render 'babyurls/footer' %>

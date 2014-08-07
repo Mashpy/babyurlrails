@@ -4,7 +4,7 @@ class CreateBabyurls < ActiveRecord::Migration
       t.string :ip
       t.string :url
       t.string :count
-      t.string :tag
+      t.string :slug
 
       t.timestamps
     end
