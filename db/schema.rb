@@ -22,4 +22,14 @@ ActiveRecord::Schema.define(version: 20140729184458) do
     t.datetime "updated_at"
   end
 
+  create_table "url", id: false, force: true do |t|
+    t.integer "id",    limit: 3,  null: false
+    t.string  "ip",    limit: 20, null: false
+    t.text    "url",              null: false
+    t.string  "count",            null: false
+    t.string  "tag",   limit: 50, null: false
+  end
+
+  add_index "url", ["id"], name: "id", using: :btree
+
 end
