@@ -1,14 +1,14 @@
 BabyURL - A nice url shorten service
-------------------------------------
+
 
 To get this type of url shorten service u have to install ruby on rails in your server.
 
 Then type this command
-```
-$ git clone https://github.com/Mashpy/babyurlrails.git
-$ cd babyurlrails
-$ bundle install
-$ cp config/database.example.yml config/database.yml
-$ rake db:migrate
-```
+
+ git clone https://github.com/Mashpy/babyurlrails.git
+ cd babyurlrails
+ bundle install
+ cp config/database.example.yml config/database.yml
+ rake db:migrate
+
 Now check your site.
